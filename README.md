@@ -55,7 +55,7 @@ Enjoy!
 
 ## Connect the VPN
 
-    openconnect --config /usr/local/etc/myvpn.conf concentrator.example.com
+    openconnect --config /usr/local/etc/vpnc/myvpn.conf concentrator.example.com
 
 ## Disconnect the VPN
 
