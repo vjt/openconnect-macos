@@ -66,3 +66,14 @@ Enjoy!
  * Start the VPN straight from the Command Line
  * Only DNS requests for the corporate domain are routed through the VPN
  * Only corporate traffic is routed through the VPN, for more privacy, security, and reliability.
+
+## License
+
+    ----------------------------------------------------------------------------
+    "THE BEER-WARE LICENSE" (Revision 42):
+    <vjt@openssl.it> wrote this file. As long as you retain this notice you
+    can do whatever you want with this stuff. If we meet some day, and you think
+    this stuff is worth it, you can buy me a beer in return.
+
+    - Marcello Barnaba
+    ----------------------------------------------------------------------------
