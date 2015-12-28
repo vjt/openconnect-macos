@@ -13,10 +13,10 @@ Enjoy!
 
 ## Setup
 
- * Create `/usr/local/etc/vpnc` and enter into it
+ * Create a working directory, say, `~/code/openconnect` and enter into it
 
-        mkdir /usr/local/etc/vpnc
-        cd /usr/local/etc/vpnc
+        mkdir ~/code/openconnect
+        cd $_
 
  * Clone the sources into the `.source` directory
 
@@ -25,16 +25,6 @@ Enjoy!
  * Install OpenConnect
 
         brew install openconnect
-
- * Install either the TUN driver via `brew install tuntap` or use the one bundled in [Tunnelblick](https://code.google.com/p/tunnelblick/)
-
-    * Brew provides you instructions on how to set up the tuntap driver. Follow them and then:
-
-             ln -s /Library/Extensions/tun.kext .
-
-    * For TunnelBlick bundled driver:
-
-             ln -s /Applications/Tunnelblick.app/Contents/Resources/tun.kext .
 
  * Copy the configuration file and set your username in it:
 
