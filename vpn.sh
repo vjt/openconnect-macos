@@ -41,7 +41,7 @@ set_routes() {
 }
 
 set_dns() {
-  scutil <<EOF
+  sudo scutil <<EOF
     d.init
     d.add Addresses * $INTERNAL_IP4_ADDRESS
     d.add DestAddresses * $INTERNAL_IP4_ADDRESS
@@ -56,7 +56,7 @@ EOF
 }
 
 unset_dns() {
-  scutil <<EOF
+  sudo scutil <<EOF
     remove State:/Network/Service/$SERVICE_NAME/DNS
     remove State:/Network/Service/$SERVICE_NAME/IPv4
 EOF

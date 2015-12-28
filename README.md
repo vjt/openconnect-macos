@@ -45,7 +45,7 @@ Enjoy!
 
 ## Connect the VPN
 
-    openconnect --config /usr/local/etc/vpnc/myvpn.conf concentrator.example.com
+    openconnect -U `whoami` --config ~/code/openconnect/myvpn.conf concentrator.example.com
 
 ## Disconnect the VPN
 
