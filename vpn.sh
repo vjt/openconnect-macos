@@ -62,15 +62,8 @@ unset_dns() {
 EOF
 }
 
-load_tun_kext() {
-  if ! kextstat | grep -q '\.tun '; then
-    kextload `dirname $0`/tun.kext
-  fi
-}
-
 case "$reason" in
   pre-init)
-    load_tun_kext
     ;;
   connect)
     mkdir -p /var/run/vpnc
