@@ -38,7 +38,7 @@ Enjoy!
         # For Linux
         cp vpn.linux.sh myvpn.sh
 
- * Copy the configuration file and set the `user`, `authgroup` and `script` settings
+ * Copy the configuration file and set the `user`, `authgroup` and `script` settings. If you want to be prompted for the username, comment out the `user` setting.
 
         cp vpn.conf.example myvpn.conf
         vi myvpn.conf
@@ -54,9 +54,14 @@ Enjoy!
 
    at the end of the file.
 
- * Done!
 
 ## Connect the VPN
+
+Use the runner script
+
+    ./runvpn.sh
+
+or run it manually, as you please
 
     openconnect -U `whoami` --config ~/code/openconnect/myvpn.conf concentrator.example.com
 
