@@ -1,4 +1,4 @@
-# Cisco VPN for nerds on MacOS
+# Cisco VPN for nerds on MacOS and Linux
 
 This is a package containing an OpenConnect configuration script for MacOS
 that allows you to fully control how the VPN connection is made, which routes
