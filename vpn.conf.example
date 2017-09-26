@@ -4,11 +4,11 @@ user <YOUR USER NAME>
 # Your authentication group name.
 authgroup <YOUR AUTH GROUP>
 
+# Full path to the network configuration script. Be sure to make this point to a valid location.
+script <NETWORK CONFIGURATION SCRIPT>
+
 # The DTLS ciphers to negotiate.
 dtls-ciphers AES256-SHA
-
-# The script to execute. Be sure to make this point to a valid location.
-script /usr/local/etc/vpnc/vpn.sh
 
 # Disable this if you have IPv6 over your VPN.
 disable-ipv6

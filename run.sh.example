@@ -1,0 +1,6 @@
+#!/bin/sh
+
+VPN_CONF=vpn.conf
+VPN_CONCENTRATOR=concentrator.example.org
+
+sudo openconnect -U `whoami` --config "$VPN_CONF" "$@" "$VPN_CONCENTRATOR"

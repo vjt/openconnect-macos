@@ -24,7 +24,7 @@ PATH=/sbin:/usr/sbin:/bin:/usr/bin
 #INTERNAL_IP4_DNS="10.0.0.1 10.0.0.2"
 
 # Specify here the routes you want to add
-INTERNAL_ROUTES="10.3.0.0/16"
+INTERNAL_ROUTES="10.42.0.0/24 172.31.33.0/24"
 
 configure_iface () {
   ip link set dev "$TUNDEV" up mtu ${INTERNAL_IP4_MTU:-1412}

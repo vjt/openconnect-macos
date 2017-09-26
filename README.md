@@ -20,22 +20,35 @@ Enjoy!
 
  * Clone the sources into the `.source` directory
 
-        git clone https://github.com/vjt/openconnect-macos .source
+        git clone https://github.com/vjt/openconnect-macos
 
  * Install OpenConnect
 
+        # For MacOS
         brew install openconnect
 
- * Copy the configuration file and set your username in it:
+        # For Linux
+        apt-get install openconnect
 
-        cp .source/vpn.conf myvpn.conf
+ * Copy the network configuration script for your OS, and set the `INTERNAL_ROUTES` variable. For MacOS, if you want to run multiple VPNs, also set the `SERVICE_NAME` variable to a unique value
+
+        # For MacOS
+        cp vpn.macos.sh myvpn.sh
+
+        # For Linux
+        cp vpn.linux.sh myvpn.sh
+
+ * Copy the configuration file and set the `user`, `authgroup` and `script` settings
+
+        cp vpn.conf.example myvpn.conf
         vi myvpn.conf
 
- * Copy the network configuration script:
+ * Copy the `run.sh.example` script and set the `VPN_CONF` and `VPN_CONCENTRATOR` variables
 
-        cp .source/vpn.sh myvpn.sh
+        cp run.sh.example runvpn.sh
+        vi runvpn.sh
 
- * Grant yourself rights to start the VPN without password: run `sudo visudo` and add
+ * Grant yourself rights to start the VPN without password: run `sudo visudo` and add:
 
         %admin ALL=(ALL) NOPASSWD: /usr/local/bin/openconnect
 
