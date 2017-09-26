@@ -18,7 +18,7 @@ Enjoy!
         mkdir ~/code/openconnect
         cd $_
 
- * Clone the sources into the `.source` directory
+ * Clone the sources
 
         git clone https://github.com/vjt/openconnect-macos
 
@@ -27,7 +27,7 @@ Enjoy!
         # For MacOS
         brew install openconnect
 
-        # For Linux
+        # For Debian/Ubuntu/Kali/other apt-based distros
         apt-get install openconnect
 
  * Create a directory for your VPN
