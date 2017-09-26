@@ -30,23 +30,28 @@ Enjoy!
         # For Linux
         apt-get install openconnect
 
+ * Create a directory for your VPN
+
+        mkdir myvpn
+        cd myvpn
+
  * Copy the network configuration script for your OS, and set the `INTERNAL_ROUTES` variable. For MacOS, if you want to run multiple VPNs, also set the `SERVICE_NAME` variable to a unique value
 
         # For MacOS
-        cp vpn.macos.sh myvpn.sh
+        cp ../net.macos.sh net.sh
 
         # For Linux
-        cp vpn.linux.sh myvpn.sh
+        cp ../net.linux.sh net.sh
 
  * Copy the configuration file and set the `user`, `authgroup` and `script` settings. If you want to be prompted for the username, comment out the `user` setting.
 
-        cp vpn.conf.example myvpn.conf
-        vi myvpn.conf
+        cp ../vpn.conf vpn.conf
+        vi vpn.conf
 
- * Copy the `run.sh.example` script and set the `VPN_CONF` and `VPN_CONCENTRATOR` variables
+ * Copy the `vpn.sh` script and set the `VPN_CONF` and `VPN_CONCENTRATOR` variables
 
-        cp run.sh.example runvpn.sh
-        vi runvpn.sh
+        cp ../vpn.sh vpn.sh
+        vi vpn.sh
 
  * Grant yourself rights to start the VPN without password: run `sudo visudo` and add:
 
@@ -59,11 +64,11 @@ Enjoy!
 
 Use the runner script
 
-    ./runvpn.sh
+    ./vpn.sh
 
 or run it manually, as you please
 
-    openconnect -U `whoami` --config ~/code/openconnect/myvpn.conf concentrator.example.com
+    openconnect -U `whoami` --config ~/code/openconnect/myvpn/vpn.conf concentrator.example.com
 
 ## Disconnect the VPN
 
